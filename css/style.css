@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #003366; /* Deep Aviation Blue */
+  --color-secondary: #f4f4f4; /* Light Sky/Aluminum */
+  --color-accent: #003366; /* Match primary dark blue */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  body {
+    @apply font-sans antialiased text-gray-900 bg-white;
+  }
+}
+
+.tech-font {
+  @apply font-mono text-sm tracking-tight;
+}
+
+/* Custom styles for aviation feel */
+.hero-gradient {
+  background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.8)), url('/images/Homeimage.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.service-card {
+  @apply border border-gray-200 rounded-xl p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-white;
+}
+
+.nav-link {
+  @apply text-gray-600 hover:text-primary font-medium transition-colors;
+}
+
+.nav-link.active {
+  @apply text-primary border-b-2 border-primary;
+}
+
+.btn-primary {
+  @apply bg-primary text-white px-6 py-3 rounded-lg font-bold hover:opacity-90 transition-all inline-block;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl font-display font-bold text-primary mb-4;
+}
+
+.section-subtitle {
+  @apply text-lg text-gray-600 mb-8 max-w-2xl;
+}
